@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" href="assets/CSS/fontawesome-5.9.0/fontawesome.all.min.css" media="all">
+<link rel="stylesheet" type="text/css" href="assets/Script/datatable/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/Script/datatable/Buttons-1.6.5/css/buttons.dataTables.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<meta charset="UTF-8">
+<title>Asteroids</title>
+
+</head>
+<body>
+
+	<div class="form-row">
+		<h1 id="titulo">LISTADO DE ASTEROIDES</h1>
+	</div>
+	
+	<!-- ANIMACIÓN DE LOADING -->
+	<div id="loading" class="form-row">
+		<img src="assets/images/loading.gif">
+	</div>
+
+	<div id="tabla" class="form-row" style="display: none;">
+		
+		
+		<h2>TOP 3</h2>
+		
+		<table id="tablaTop3" class="display responsive stripe nowrap" style="width: 100%;">
+			<thead>
+				<tr>
+					<td></td>
+					<td>Nombre</td>
+			        <td>Diametro</td>
+			        <td>Velocidad</td>
+			        <td>fecha</td>
+			        <td>Planeta</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>Primero</td>
+					<td id="nombre1"></td>
+			        <td id="diametro1"></td>
+			        <td id="velocidad1"></td>
+			        <td id="fecha1"></td>
+			        <td id="planeta1"></td>
+				</tr>
+				
+				<tr>
+					<td>Segundo</td>
+					<td id="nombre2"></td>
+			        <td id="diametro2"></td>
+			        <td id="velocidad2"></td>
+			        <td id="fecha2"></td>
+			        <td id="planeta2"></td>
+				</tr>
+				
+				<tr>
+					<td>Tercero</td>
+					<td id="nombre3"></td>
+			        <td id="diametro3"></td>
+			        <td id="velocidad3"></td>
+			        <td id="fecha3"></td>
+			        <td id="planeta3"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br>
+		
+		<h2>LISTADO COMPLETO DE ASTEROIDES DEVUELTOS POR LA API</h2>
+		<table id="tablaAsteroides" class="display responsive stripe nowrap" style="width: 100%;">
+		    <thead>
+		        <tr>
+		         <td>Nombre</td>
+		         <td>Diametro</td>
+		         <td>Velocidad</td>
+		         <td>fecha</td>
+		         <td>Planeta</td>
+		         <td>Potencialmente Peligroso</td>
+		        </tr>
+		    </thead>
+		    <tfoot>
+		        <tr>
+		         <td>Nombre</td>
+		         <td>Diametro</td>
+		         <td>Velocidad</td>
+		         <td>fecha</td>
+		         <td>Planeta</td>
+		         <td>Potencialmente Peligroso</td>
+		        </tr>
+		    </tfoot>
+		</table>
+	</div>            
+	
+	
+	
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/script/jquery-3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/script/jquery-3.5.1/popper.js"></script>
+<script type="text/javascript" src="assets/script/datatable/datatables.min.js"></script>	
+<script type="text/javascript" src="assets/script/datatable/DataTables-1.10.22/js/jquery.dataTables.min.js"></script>         <!--  tabla de datos principal js -->
+<script type="text/javascript" src="assets/script/datatable/Buttons-1.6.5/js/dataTables.buttons.min.js"></script>           <!--  dataTable tabla botón main js -->
+<script type="text/javascript" src="assets/script/datatable/Buttons-1.6.5/js/buttons.flash.min.js"></script>          <!--  Funciones de exportación js relacionadas -->
+<script type="text/javascript" src="assets/script/datatable/Buttons-1.6.5/js/buttons.print.min.js"></script>
+<script type="text/javascript" src="assets/script/datatable/Buttons-1.6.5/js/buttons.html5.min.js"></script>          <!--  Funciones de exportación js relacionadas -->
+<script type="text/javascript" src="assets/script/datatable/JSZip-2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="assets/script/datatable/pdfmake-0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="assets/script/datatable/pdfmake-0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="assets/script/asteroids.js"></script> <!-- Funciones vínculadas a la página asteroids.html -->
+
+
+</html>
